@@ -13,10 +13,10 @@
       <div class="site-header">
         <div class="container-fluid">
           <a href="http://umich.edu" class="site-brand-umich-block-m-logo">
-            <img src="assets/images/umich_block_m.png" alt="University of Michigan">
+            <img src="assets/images/umich_block_m.png" alt="Go to the University of Michigan homepage">
           </a>
-          <a href="/" class="site-brand-mlibrary-logo">
-            <img src="assets/images/mlibrary_logo.png" alt="Library">
+          <a href="http://lib.umich.edu" class="site-brand-mlibrary-logo">
+            <img src="assets/images/mlibrary_logo.png" alt="Go to the University of Michigan Library homepage">
           </a>
         </div>
       </div>
@@ -26,7 +26,7 @@
       <div class="page-container">
         <h1 class="no-margin">Citation Linker</h1>
         <p>
-          Find a journal article or book by citation information.
+          Find a journal article or book by citation information. We'll send you off to MGet It when you're finished with the form.
         </p>
       </div>
     </div>
@@ -47,38 +47,38 @@
 
       <form action="" method="post" id="article_form">
         <fieldset>
-          <label for="name">Article Title</label>
-          <input id="name" type="text" />
+          <label for="article-title">Article Title</label>
+          <input id="article-title" data-openurlkey="rft.atitle" type="text" />
         </fieldset>
 
         <fieldset>
-          <label for="name">Journal</label>
-          <input id="name" type="text" />
+          <label for="journal-title">Journal Title</label>
+          <input id="journal-title" data-openurlkey="rft.title" type="text" />
         </fieldset>
 
         <fieldset>
-          <label class="fieldset-label">Citation Info</label>
+          <legend class="fieldset-label">Citation Info</legend>
 
           <div class="row">
             <div class="col-xs-4">
               <label for="citation-info-volume">Volume</label>
-              <input id="citation-info-volume" type="text" />
+              <input id="citation-info-volume" data-openurlkey="rft.volume" type="text" />
             </div>
 
             <div class="col-xs-4">
               <label for="citation-info-issue">Issue</label>
-              <input id="citation-info-issue" type="text" />
+              <input id="citation-info-issue" data-openurlkey="rft.issue" type="text" />
             </div>
 
             <div class="col-xs-4">
               <label for="citation-info-start-page">Start Page</label>
-              <input id="citation-info-start-page" type="text" />
+              <input id="citation-info-start-page" data-openurlkey="rft.spage" type="text" />
             </div>
           </div>
         </fieldset>
 
         <fieldset>
-          <label class="fieldset-label">Publication Date</label>
+          <legend class="fieldset-label">Publication Date</legend>
 
           <div class="row">
             <div class="col-xs-4">
@@ -99,50 +99,50 @@
         </fieldset>
 
         <fieldset>
-          <label class="fieldset-label">Author</label>
+          <legend class="fieldset-label">Author</legend>
 
           <div class="row">
             <div class="col-xs-6">
               <label for="author-surname">Surname</label>
-              <input id="author-surname" type="text" />
+              <input id="author-surname" data-openurlkey="rft.aulast" type="text" />
             </div>
 
             <div class="col-xs-6">
               <label for="author-first">First</label>
-              <input id="author-first" type="text" />
+              <input id="author-first" data-openurlkey="rft.aufirst" type="text" />
             </div>
           </div>
 
           <div class="row spacing-top-1">
             <div class="col-xs-6">
               <label for="author-full">Full</label>
-              <input id="author-full" type="text" />
+              <input id="author-full" data-openurlkey="rft.au" type="text" />
             </div>
 
             <div class="col-xs-6">
               <label for="author-corp">Corporate</label>
-              <input id="author-corp" type="text" />
+              <input id="author-corp" data-openurlkey="rft.aucorp" type="text" />
             </div>
           </div>
         </fieldset>
 
         <fieldset>
-          <label class="fieldset-label">Standard Identifier</label>
+          <legend class="fieldset-label">Standard Identifier</legend>
 
           <div class="row">
             <div class="col-xs-12 col-sm-4">
-              <label for="volume">ISSN</label>
-              <input id="volume" type="text" />
+              <label for="issn">ISSN</label>
+              <input id="issn" data-openurlkey="rft.issn" type="text" />
             </div>
 
             <div class="col-xs-12 col-sm-4">
-              <label for="email">DOI</label>
-              <input id="email" type="text" />
+              <label for="doi">DOI</label>
+              <input id="doi" data-openurlkey="rft.doi" type="text" />
             </div>
 
             <div class="col-xs-12 col-sm-4">
-              <label for="email">PMID</label>
-              <input id="email" type="text" />
+              <label for="pmid">PMID</label>
+              <input id="pmid" data-openurlkey="rft.pmid" type="text" />
             </div>
           </div>
         </fieldset>
@@ -152,13 +152,13 @@
 
       <form action="" method="post" id="book_form" class="hidden">
         <fieldset>
-          <label for="name">Chapter</label>
-          <input id="book-chapter" type="text" />
+          <label for="book-chapter">Chapter Title</label>
+          <input id="book-chapter" data-openurlkey="rft.atitle" type="text" />
         </fieldset>
 
         <fieldset>
-          <label for="name">Book</label>
-          <input id="book-book" type="text" />
+          <label for="book-book">Book Title</label>
+          <input id="book-book" data-openurlkey="rft.btitle" type="text" />
         </fieldset>
 
         <fieldset>
@@ -167,23 +167,23 @@
           <div class="row">
             <div class="col-xs-4">
               <label for="citation-info-volume">Publisher</label>
-              <input id="page-publisher" type="text" />
+              <input id="page-publisher" data-openurlkey="rft.pub" type="text" />
             </div>
 
             <div class="col-xs-4">
-              <label for="citation-info-issue">Page</label>
-              <input id="book-page" type="text" />
+              <label for="citation-info-issue">Start Page</label>
+              <input id="book-page" data-openurlkey="rft.spage" type="text" />
             </div>
 
             <div class="col-xs-4">
-              <label for="citation-info-start-page">Place</label>
-              <input id="book-place" type="text" />
+              <label for="citation-info-start-page">Place of Publication</label>
+              <input id="book-place" data-openurlkey="rft.place" type="text" />
             </div>
           </div>
         </fieldset>
 
         <fieldset>
-          <label class="fieldset-label">Publication Date</label>
+          <legend class="fieldset-label">Publication Date</legend>
 
           <div class="row">
             <div class="col-xs-4">
@@ -204,52 +204,51 @@
         </fieldset>
 
         <fieldset>
-          <label class="fieldset-label">Author</label>
+          <legend class="fieldset-label">Author</legend>
 
           <div class="row">
             <div class="col-xs-6">
               <label for="author-surname">Surname</label>
-              <input id="author-surname" type="text" />
+              <input id="author-surname" data-openurlkey="rft.aulast" type="text" />
             </div>
 
             <div class="col-xs-6">
               <label for="author-first">First</label>
-              <input id="author-first" type="text" />
+              <input id="author-first" data-openurlkey="rft.aufirst" type="text" />
             </div>
           </div>
 
           <div class="row spacing-top-1">
             <div class="col-xs-6">
               <label for="author-full">Full</label>
-              <input id="author-full" type="text" />
+              <input id="author-full" data-openurlkey="rft.au" type="text" />
             </div>
 
             <div class="col-xs-6">
               <label for="author-corp">Corporate</label>
-              <input id="author-corp" type="text" />
+              <input id="author-corp" data-openurlkey="rft.aucorp" type="text" />
             </div>
           </div>
         </fieldset>
 
         <fieldset>
-          <label class="fieldset-label">Standard Identifier</label>
+          <legend class="fieldset-label">Standard Identifier</legend>
 
           <div class="row">
             <div class="col-xs-12 col-sm-6">
               <label for="volume">ISBN</label>
-              <input id="volume" type="text" />
+              <input id="volume" data-openurlkey="rft.isbn" type="text" />
             </div>
 
             <div class="col-xs-12 col-sm-6">
               <label for="email">DOI</label>
-              <input id="email" type="text" />
+              <input id="email" data-openurlkey="rft.doi" type="text" />
             </div>
           </div>
         </fieldset>
 
         <input type="submit" value="Find It" class="button" />
       </form>
-
 
     </div>
 
@@ -259,6 +258,8 @@
 
     <script src="https://unpkg.com/expect/umd/expect.min.js"></script> <!-- for development only -->
     <script src="assets/javascript/vendor/underscore.js"></script>
-    <script src="assets/javascript/scripts.js"></script>
+    <script src="assets/javascript/tabs.js"></script>
+    <script src="assets/javascript/citation_linker_form.js"></script>
+    <script src="assets/javascript/openurl.js"></script>
   </body>
 </html>

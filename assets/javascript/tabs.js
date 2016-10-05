@@ -1,13 +1,4 @@
-/*
-
-TODO
-
-1. Show Article or Book form. Handle tabs.
-2. On submit take form fields and turn into open URL
-
-*/
-
-var tab_data = [
+var tab_config = [
   {
     tab: 'tab1',
     content: 'article_form'
@@ -38,4 +29,4 @@ var handle_tabs = function(tab_data) {
   })
 }
 
-handle_tabs(tab_data)
+handle_tabs(tab_config)
