@@ -212,7 +212,7 @@ input[type="text"]:read-only {
   cursor: not-allowed; }
 
 fieldset {
-  margin: 1.5rem 0; }
+  margin: 1rem 0; }
 
 .help-text {
   margin: 0; }
