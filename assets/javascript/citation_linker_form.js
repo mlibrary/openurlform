@@ -2,7 +2,7 @@ var citation_linker = function() {
   var initialize = function(forms) {
     // Setup form submit event handler
     _.each(forms, function(form) {
-      var form_element = document.getElementById(form)
+      var form_element = document.getElementById(form.form_id)
 
       // Search for form submit element within form
       _.each(form_element.childNodes, function(child_node) {
@@ -17,7 +17,7 @@ var citation_linker = function() {
   }
 
   var form_submit = function(form) {
-    var form_elements = document.getElementById(form).querySelectorAll('[data-openurlkey]')
+    var form_elements = document.getElementById(form.form_id).querySelectorAll('[data-openurlkey]')
 
     var form_openurl_keys = _.reduce(form_elements, function(memo, node) {
       if (node.value == "") {
@@ -33,7 +33,7 @@ var citation_linker = function() {
     // If part of the form is filled out
     if (form_openurl_keys.length > 0) {
       // Redirect
-      window.location = openurl().create(form_openurl_keys)
+      window.location = openurl().create(form.type, form_openurl_keys)
     }
   }
 
@@ -43,4 +43,12 @@ var citation_linker = function() {
 }
 
 // pass in an array of IDs associated with each form
-citation_linker().init(['article_form', 'book_form'])
+citation_linker().init([
+  {
+    form_id: 'article_form',
+    type: 'journal'
+  }, {
+    form_id: 'book_form',
+    type: 'book'
+  }
+])
