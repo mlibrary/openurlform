@@ -53,6 +53,12 @@ var create_query_strings = function() {
       return '&' + escape('rft_id') + '=info:doi=' + escape(value.value)
     }
 
+    // PMID is also a special snowflakes
+    if (value.key == 'pmid') {
+      // Example: &rft_id=info:pmid=27405801
+      return '&' + escape('rft_id') + '=info:pmid/' + escape(value.value)
+    }
+
     return '&' + escape(value.key) + '=' + escape(value.value)
   }
 
